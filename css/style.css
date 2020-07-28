@@ -28,13 +28,111 @@ body {
     height: 100vh;
 }
 
+/*--------------- text line animation --------------- */
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 4.5s;
+}
+
+#title path:nth-child(1) {
+    stroke-dasharray: 925;
+    stroke-dashoffset: 925;
+    animation: line-anim 2s ease forwards;
+}
+
+#title path:nth-child(2) {
+    stroke-dasharray: 553;
+    stroke-dashoffset: 553;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+
+#title path:nth-child(3) {
+    stroke-dasharray: 608;
+    stroke-dashoffset: 608;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+
+#title path:nth-child(4) {
+    stroke-dasharray: 663;
+    stroke-dashoffset: 663;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+#title path:nth-child(5) {
+    stroke-dasharray: 553;
+    stroke-dashoffset: 553;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+
+#title path:nth-child(6) {
+    stroke-dasharray: 381;
+    stroke-dashoffset: 381;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+
+#title path:nth-child(7) {
+    stroke-dasharray: 553;
+    stroke-dashoffset: 553;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+
+#title path:nth-child(8) {
+    stroke-dasharray: 282;
+    stroke-dashoffset: 282;
+    animation: line-anim 2s ease forwards 2.1s;
+}
+
+#title path:nth-child(9) {
+    stroke-dasharray: 490;
+    stroke-dashoffset: 490;
+    animation: line-anim 2s ease forwards 2.4s;
+}
+
+#title path:nth-child(10) {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: line-anim 2s ease forwards 2.7s;
+}
+
+#title path:nth-child(11) {
+    stroke-dasharray: 553;
+    stroke-dashoffset: 553;
+    animation: line-anim 2s ease forwards 3.1s;
+}
+
+#title path:nth-child(12) {
+    stroke-dasharray: 279;
+    stroke-dashoffset: 279;
+    animation: line-anim 2s ease forwards 3.4s;
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
 /*--------------- typewriter effect --------------- */
+#subtitle-container {
+    position: absolute;
+    top: 45rem;
+    left: 85px;
+}
+
+#subtitle-container h1 {
+    letter-spacing: -2.5px;
+}
+
 .line {
     width: 24em;
     top: 50%;
     margin: auto;
     border-right: 2px solid rgba(255, 255, 255, 0.75);
-    text-align: center;
+    /* text-align: center; */
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
@@ -578,6 +676,8 @@ textarea:focus {
     border: 1px solid #dfdfdf;
     border-radius: 50px;
     outline: none;
+    overflow: hidden;
+    position: relative;
 }
 
 .send:hover {

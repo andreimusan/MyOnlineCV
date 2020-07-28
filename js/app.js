@@ -14,6 +14,7 @@ menuItem.forEach(elem => elem.addEventListener('click', function (event) {
     menuBtn.classList.toggle('open');
     document.querySelector('#resize').classList.toggle('active');
 }));
+// navigation ends here
 
 // progress bar on scroll
 window.onscroll = function() {
@@ -23,10 +24,7 @@ window.onscroll = function() {
     document.getElementById("progress-bar").style.width = scrolled + "%";
 };
 
-// navigation ends here
-
 // nav animation
-
 TweenMax.from("#brand", 1, {
     delay: 0.4,
     y: 10,
@@ -40,10 +38,30 @@ TweenMax.staggerFrom("#menu li a", 1, {
     ease: Expo.easeInOut
 }, 0.1);
 
-// nav animation ends
+// title text animation
+TweenMax.from("#title", 0, {
+    scaleX:2,
+    scaleY:2
+});
+
+TweenMax.to("#title", 2, {
+    delay: 5,
+    scaleX:0.8,
+    scaleY:0.8,
+    yPercent:-30, 
+    xPercent:-10,
+    ease: Expo.easeInOut,
+});
 
 // initialize wow.js
 new WOW().init();
 
 // initialize smooth scroll
 let scroll = new SmoothScroll('a[href*="#"]');
+
+
+const title = document.querySelectorAll('#title path');
+
+for (let i = 0; i < title.length; i++) {
+    console.log(`Letter ${i} is ${title[i].getTotalLength()}`);
+}
