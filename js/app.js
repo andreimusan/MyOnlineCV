@@ -25,33 +25,33 @@ window.onscroll = function() {
 };
 
 // nav animation
-TweenMax.from("#brand", 1, {
-    delay: 0.4,
+TweenMax.from("#menu li", 1, {
+    delay: 8.1,
     y: 10,
     opacity: 0,
     ease: Expo.easeInOut
 })
 
 TweenMax.staggerFrom("#menu li a", 1, {
-    delay: 0.4,
+    delay: 8.1,
     opacity: 0,
     ease: Expo.easeInOut
 }, 0.1);
 
 // title text animation
-TweenMax.from("#title", 0, {
-    scaleX:2,
-    scaleY:2
-});
+TweenMax.from("#sub-title", 3, {
+    delay: 6.1,
+    y: 10,
+    opacity: 0,
+    ease: Expo.easeInOut
+})
 
-TweenMax.to("#title", 2, {
-    delay: 5,
-    scaleX:0.8,
-    scaleY:0.8,
-    yPercent:-30, 
-    xPercent:-10,
-    ease: Expo.easeInOut,
-});
+// scroll down animation delay
+window.addEventListener('load', (event) => {
+    setTimeout(() => {
+        document.querySelector('#scroll-down').classList.remove('notVisible');
+    }, 9100);
+  });
 
 // initialize wow.js
 new WOW().init();

@@ -29,95 +29,44 @@ body {
 }
 
 /*--------------- text line animation --------------- */
-#title {
+#title-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: fill 0.5s ease forwards 4.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-#title path:nth-child(1) {
-    stroke-dasharray: 925;
-    stroke-dashoffset: 925;
-    animation: line-anim 2s ease forwards;
+#sub-title{
+    font-family: "Roboto" !important;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-right: 25px;
 }
 
-#title path:nth-child(2) {
-    stroke-dasharray: 553;
-    stroke-dashoffset: 553;
-    animation: line-anim 2s ease forwards 0.3s;
-}
-
-#title path:nth-child(3) {
-    stroke-dasharray: 608;
-    stroke-dashoffset: 608;
-    animation: line-anim 2s ease forwards 0.6s;
-}
-
-#title path:nth-child(4) {
-    stroke-dasharray: 663;
-    stroke-dashoffset: 663;
-    animation: line-anim 2s ease forwards 0.9s;
-}
-
-#title path:nth-child(5) {
-    stroke-dasharray: 553;
-    stroke-dashoffset: 553;
-    animation: line-anim 2s ease forwards 1.2s;
-}
-
-#title path:nth-child(6) {
-    stroke-dasharray: 381;
-    stroke-dashoffset: 381;
-    animation: line-anim 2s ease forwards 1.5s;
-}
-
-#title path:nth-child(7) {
-    stroke-dasharray: 553;
-    stroke-dashoffset: 553;
-    animation: line-anim 2s ease forwards 1.8s;
-}
-
-#title path:nth-child(8) {
-    stroke-dasharray: 282;
-    stroke-dashoffset: 282;
-    animation: line-anim 2s ease forwards 2.1s;
-}
-
-#title path:nth-child(9) {
-    stroke-dasharray: 490;
-    stroke-dashoffset: 490;
-    animation: line-anim 2s ease forwards 2.4s;
-}
-
-#title path:nth-child(10) {
-    stroke-dasharray: 600;
-    stroke-dashoffset: 600;
-    animation: line-anim 2s ease forwards 2.7s;
-}
-
-#title path:nth-child(11) {
-    stroke-dasharray: 553;
-    stroke-dashoffset: 553;
-    animation: line-anim 2s ease forwards 3.1s;
-}
-
-#title path:nth-child(12) {
-    stroke-dasharray: 279;
-    stroke-dashoffset: 279;
-    animation: line-anim 2s ease forwards 3.4s;
-}
-
-@keyframes line-anim {
-    to {
-        stroke-dashoffset: 0;
+@media(max-width: 1200px) {
+    #title-container {
+        transform: translate(-50%, -50%) scale(0.7);
     }
 }
 
+@media(max-width: 768px) {
+    #title-container {
+        transform: translate(-50%, -50%) scale(0.4);
+    }
+}
+
+@media(max-width: 425px) {
+    #title-container {
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+}
 
 /*--------------- typewriter effect --------------- */
-#subtitle-container {
+/* #subtitle-container {
     position: absolute;
     top: 45rem;
     left: 85px;
@@ -132,7 +81,7 @@ body {
     top: 50%;
     margin: auto;
     border-right: 2px solid rgba(255, 255, 255, 0.75);
-    /* text-align: center; */
+    text-align: center;
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
@@ -174,7 +123,7 @@ body {
     to {
         border-right-color: transparent;
     }
-}
+}*/
 
 /*--------------- navigation --------------- */
 nav {
@@ -410,7 +359,7 @@ nav #menu li a:hover::after {
     justify-content: center;
 }
 
-.hero h1 {
+/* .hero h1 {
     font-weight: 100;
     text-align: center;
     letter-spacing: -2.75px;
@@ -419,9 +368,9 @@ nav #menu li a:hover::after {
 
 .hero h1 span{
     font-size: 18px;
-}
+} */
 
-@media(max-width: 768px) {
+/* @media(max-width: 768px) {
     .header h1 {
           font-size: 26px;
     }
@@ -429,7 +378,7 @@ nav #menu li a:hover::after {
     .hero h1 span{
         font-size: 13px;
     }
-}
+} */
 
 /*--------------- scroll down icon animation --------------- */
 .scroll-down {
@@ -441,13 +390,15 @@ nav #menu li a:hover::after {
     font-size: 20px;
     z-index: 0;
     text-decoration: none;
-    text-shadow: 0;
     width: 13px;
     height: 13px;
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
-    -webkit-transform: translate(-50%, 0) rotate(45deg);
     animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+.notVisible {
+    display: none;
 }
 
 @keyframes fade_move_down {
@@ -465,7 +416,7 @@ nav #menu li a:hover::after {
 }
 
 /*--------------- projects section --------------- */
-h6 {
+.container-fluid h4 {
     text-align: center;
 }
 
@@ -572,10 +523,6 @@ h6 {
     .project {
           width: 90% !important;
           margin: 14px auto;
-    }
-
-    .vertical {
-          display: none;
     }
 
     .project1::after, .project2::after, .project3::after, .project4::after {
