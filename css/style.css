@@ -429,79 +429,42 @@ nav #menu li a:hover::after {
 }
 
 .project {
-    height: 500px;
+    height: 200px;
+}
+
+.project-title {
+    text-align: end;
+}
+
+.project-title span {
+    font-family: "Roboto Mono";
+    font-size: 25px;
+    color: #fff;
+    position: relative;
+    top: 7rem;
 }
 
 .project1 {
-    background: url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+    background: url(https://images.unsplash.com/photo-1532169627909-dc6319871078?ixlib=rb-1.2.1&auto=format&fit=crop&w=3900&q=80) no-repeat 50% 50%;
     background-size: cover;
-}
-
-.project1::after {
-    content: "timeless flow.";
-    font-family: "Roboto Mono";
-    font-size: 36px;
-    position: relative;
-    color: #fff;
-    display: block;
-    top: 8%;
-    left: -60%;
-    right: 0;
-    bottom: 0;
+    filter: grayscale(100%);
 }
 
 .project2 {
-    background: url(https://images.unsplash.com/photo-1468870045442-e7d799d8c98a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2448&q=80) no-repeat 50% 50%;
+    background: url(https://images.unsplash.com/photo-1483632823920-2c6e0bed6411?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80) no-repeat 50% 50%;
     background-size: cover;
-}
-
-.project2::after {
-    content: "foretime.";
-    font-family: "Roboto Mono";
-    font-size: 36px;
-    position: relative;
-    color: #fff;
-    display: block;
-    top: 80%;
-    left: 90%;
-    right: 0;
-    bottom: 0;
+    filter: grayscale(100%);
 }
 
 .project3 {
-    background: url(https://images.unsplash.com/photo-1482501157762-56897a411e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) no-repeat 50% 50%;
+    background: url(https://images.unsplash.com/photo-1558877397-9cb93e41a9c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80) no-repeat 50% 40%;
     background-size: cover;
-}
-
-.project3::after {
-    content: "never again.";
-    font-family: "Roboto Mono";
-    font-size: 36px;
-    position: relative;
-    color: #fff;
-    display: block;
-    top: 80%;
-    left: -50%;
-    right: 0;
-    bottom: 0;
+    filter: grayscale(100%);
 }
 
 .project4 {
     background: url(https://images.unsplash.com/photo-1435685813800-51ba4ceb9c4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1785&q=80) no-repeat 50% 50%;
     background-size: cover;
-}
-
-.project4::after {
-    content: "departure.";
-    font-family: "Roboto Mono";
-    font-size: 36px;
-    position: relative;
-    color: #fff;
-    display: block;
-    top: 10%;
-    left: 90%;
-    right: 0;
-    bottom: 0;
 }
 
 @media(max-width: 768px) {
@@ -514,7 +477,7 @@ nav #menu li a:hover::after {
           display: none;
     }
 
-    .project1::after, .project2::after, .project3::after, .project4::after {
+    .project-title span {
           display: none;
     }
 }
@@ -525,7 +488,7 @@ nav #menu li a:hover::after {
           margin: 14px auto;
     }
 
-    .project1::after, .project2::after, .project3::after, .project4::after {
+    .project-title span {
           display: none;
     }
 }
@@ -539,6 +502,12 @@ nav #menu li a:hover::after {
     font-weight: 300;
     line-height: 36px;
     color: grey;
+}
+
+.hero-content p span {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
 }
 
 .hero-content h6 {
@@ -560,6 +529,27 @@ nav #menu li a:hover::after {
 
 .image {
     background: url(https://images.unsplash.com/photo-1540885762261-a2ca01f290f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80) no-repeat 50% 70%;
+}
+
+.skills p span {
+    font-weight: 300;
+    color: grey;
+}
+
+.hobby .fas {
+    font-size: 30px;
+    color: grey;
+    margin-right: 2rem;
+}
+
+.hobby .fas span {
+    font-family: "Roboto Mono";
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 0.75rem;
+    position: relative;
+    bottom: 0.3rem;
+    color: grey;
 }
 
 /*--------------- contact form --------------- */

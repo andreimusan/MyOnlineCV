@@ -39,7 +39,7 @@ TweenMax.staggerFrom("#menu li a", 1, {
 }, 0.1);
 
 // title text animation
-TweenMax.from("#sub-title", 3, {
+TweenMax.from("#sub-title", 2, {
     delay: 6.1,
     y: 10,
     opacity: 0,
@@ -58,10 +58,3 @@ new WOW().init();
 
 // initialize smooth scroll
 let scroll = new SmoothScroll('a[href*="#"]');
-
-
-const title = document.querySelectorAll('#title path');
-
-for (let i = 0; i < title.length; i++) {
-    console.log(`Letter ${i} is ${title[i].getTotalLength()}`);
-}
