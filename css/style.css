@@ -28,6 +28,14 @@ body {
     height: 100vh;
 }
 
+/*--------------- hero section --------------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*--------------- text line animation --------------- */
 #title-container {
     position: absolute;
@@ -65,66 +73,6 @@ body {
     }
 }
 
-/*--------------- typewriter effect --------------- */
-/* #subtitle-container {
-    position: absolute;
-    top: 45rem;
-    left: 85px;
-}
-
-#subtitle-container h1 {
-    letter-spacing: -2.5px;
-}
-
-.line {
-    width: 24em;
-    top: 50%;
-    margin: auto;
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);
-    font-weight: 100;
-}
-
-.anim-typewriter {
-    animation: typewriter 4s steps(40) 1s 1 normal both,
-        blinkTextCussor 500ms steps(40) infinite normal;
-}
-
-@keyframes typewriter {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 18em;
-    }
-}
-
-@media(max-width: 768px) {
-    @keyframes typewriter {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 17em;
-        }
-    }
-}
-
-@keyframes blinkTextCussor {
-    from {
-        border-right-color: rgba(255, 255, 255, 0.75);
-    }
-
-    to {
-        border-right-color: transparent;
-    }
-}*/
-
 /*--------------- navigation --------------- */
 nav {
     width: 100%;
@@ -139,21 +87,7 @@ nav {
     top: 80px;
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
-    width: 0%;
-}
-
-nav #brand {
-    float: left;
-    display: block;
-    margin-left: 82px;
-    line-height: 80px;
-    font-weight: 700;
-}
-
-nav #brand a {
-    color: #fff;
-    transition: all 0.3s ease-out;
-    text-decoration: none;
+    width: 0;
 }
 
 nav #menu {
@@ -192,7 +126,7 @@ nav #menu li a::after {
     background: #fff;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform .5s;
+    transition: transform 0.5s;
 }
 
 nav #menu li a:hover::after {
@@ -351,35 +285,6 @@ nav #menu li a:hover::after {
     }
 }
 
-/*--------------- hero section --------------- */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* .hero h1 {
-    font-weight: 100;
-    text-align: center;
-    letter-spacing: -2.75px;
-    line-height: 58px;
-}
-
-.hero h1 span{
-    font-size: 18px;
-} */
-
-/* @media(max-width: 768px) {
-    .header h1 {
-          font-size: 26px;
-    }
-
-    .hero h1 span{
-        font-size: 13px;
-    }
-} */
-
 /*--------------- scroll down icon animation --------------- */
 .scroll-down {
     position: absolute;
@@ -420,6 +325,10 @@ nav #menu li a:hover::after {
     text-align: center;
 }
 
+.projects-section a {
+    text-decoration: none;
+}
+
 .vertical {
     margin-top: 40px;
     border-left: 1px solid #fff;
@@ -430,24 +339,45 @@ nav #menu li a:hover::after {
 
 .project {
     height: 200px;
+    transition: all 0.5s ease;
+    opacity: 0.55;
 }
 
 .project-title {
     text-align: end;
+    position: relative;
+    font-weight: 300;
 }
 
 .project-title span {
-    font-family: "Roboto Mono";
     font-size: 25px;
     color: #fff;
     position: relative;
     top: 7rem;
+    transition: all 0.5s ease 0.5s;
+}
+
+.projects-section .row {
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .project1 {
     background: url(https://images.unsplash.com/photo-1532169627909-dc6319871078?ixlib=rb-1.2.1&auto=format&fit=crop&w=3900&q=80) no-repeat 50% 50%;
     background-size: cover;
     filter: grayscale(100%);
+}
+
+.overlay {
+    position: absolute;
+    z-index: -10;
+    background: #fff;
+    box-sizing: content-box;
+    height: 200px;
+    width: 0;
+    left: -150%;
+    opacity: 0.75;
+    transition: all 1s ease;
 }
 
 .project2 {
@@ -465,6 +395,19 @@ nav #menu li a:hover::after {
 .project4 {
     background: url(https://images.unsplash.com/photo-1435685813800-51ba4ceb9c4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1785&q=80) no-repeat 50% 50%;
     background-size: cover;
+}
+
+.projects-section .row:hover .overlay {
+    width: 250%;
+}
+
+.projects-section .row:hover .project-title span {
+    font-weight: 300;
+    color: #0f0f0f;
+}
+
+.projects-section .row:hover .project {
+    opacity: 1;
 }
 
 @media(max-width: 768px) {
@@ -495,7 +438,7 @@ nav #menu li a:hover::after {
 
 /*---------------about page --------------- */
 .hero-content {
-    margin-left: 0%;
+    margin-left: 0;
 }
 
 .hero-content p {
@@ -557,36 +500,26 @@ nav #menu li a:hover::after {
     margin: 5% 0;
 }
 
-#contact-form ul {
-    list-style: none;
-    border-radius: 5px;
-    margin-bottom: 40px;
-    padding: 0;
-}
-
-#contact-form li {
-    padding: 10px 0;
-}
-
-#contact-form li:last-of-type {
-    border-bottom: none;
-}
-
 #contact-form label {
     display: block;
-    font-size: .8em;
+    font-size: 0.8em;
     color: #999;
-    padding-left: 5px;
+    padding: 10px 5px 5px 5px;
 }
 
 #contact-form input, #contact-form textarea {
     width: 100%;
     padding: 5px;
     border: none;
+    border-bottom: 1px solid #dfdfdf;
     resize: vertical;
     background: transparent;
     color: #fff;
-    font-weight: 700;
+    font-weight: 300;
+}
+
+#contact-form textarea {
+    margin-bottom: 40px;
 }
 
 input:focus {
@@ -620,6 +553,10 @@ textarea:focus {
 .send:hover {
     background: #dfdfdf;
     color: #101010;
+}
+
+.send:focus {
+    outline: none;
 }
 
 /*--------------- footer section --------------- */

@@ -58,3 +58,27 @@ new WOW().init();
 
 // initialize smooth scroll
 let scroll = new SmoothScroll('a[href*="#"]');
+
+// // send form to email
+// const sendBtn = document.getElementById('contact-submit');
+// sendBtn.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     const contactName = document.getElementById('contact-name').value;
+//     const contactEmail = document.getElementById('contact-email').value;
+//     const contactMessage = document.getElementById('contact-message').value;
+//     console.log(contactName, contactEmail, contactMessage);
+
+//     let templateParams = {
+//         contactName: contactName,
+//         contactEmail: contactEmail,
+//         contactMessage: contactMessage
+//     };
+    
+    
+//     emailjs.sendForm('gmail', 'template_oSN3FJxX', templateParams)
+//         .then(function(response) {
+//            console.log('SUCCESS!', response.status, response.text);
+//         }, function(error) {
+//            console.log('FAILED...', error);
+//         });
+// });
