@@ -1,0 +1,58 @@
+/*---------------about page --------------- */
+.hero-content {
+    margin-left: 0;
+}
+
+.hero-content p {
+    font-weight: 300;
+    line-height: 36px;
+    color: grey;
+}
+
+.hero-content p span {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+}
+
+.hero-content h6 {
+    text-align: left;
+}
+
+@media(max-width: 768px) {
+    .hero-content {
+        padding-top: 50px;
+        width: 96%;
+        margin: 0 auto;
+    }
+}
+
+.about {
+    height: 500px;
+    margin-top: 120px;
+}
+
+.image {
+    background: url(https://images.unsplash.com/photo-1540885762261-a2ca01f290f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80) no-repeat 50% 70%;
+}
+
+.skills p span {
+    font-weight: 300;
+    color: grey;
+}
+
+.hobby .fas {
+    font-size: 30px;
+    color: grey;
+    margin-right: 2rem;
+}
+
+.hobby .fas span {
+    font-family: "Roboto Mono";
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 0.75rem;
+    position: relative;
+    bottom: 0.3rem;
+    color: grey;
+}

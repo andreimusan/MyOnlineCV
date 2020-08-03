@@ -1,0 +1,64 @@
+/*--------------- contact form --------------- */
+.contact-form {
+    margin: 5% 0;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 0.8em;
+    color: #999;
+    padding: 10px 5px 5px 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #dfdfdf;
+    resize: vertical;
+    background: transparent;
+    color: #fff;
+    font-weight: 300;
+}
+
+.contact-form textarea {
+    margin-bottom: 40px;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+textarea:focus {
+    outline: none;
+    border: none;
+}
+
+.textarea {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.send {
+    text-transform: uppercase;
+    padding: 10px 50px;
+    background: transparent;
+    color: #dfdfdf;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border: 1px solid #dfdfdf;
+    border-radius: 50px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.send:hover {
+    background: #dfdfdf;
+    color: #101010;
+}
+
+.send:focus {
+    outline: none;
+}

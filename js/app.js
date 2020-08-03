@@ -26,14 +26,14 @@ window.onscroll = function() {
 
 // nav animation
 TweenMax.from("#menu li", 1, {
-    delay: 8.1,
+    delay: 3.1,
     y: 10,
     opacity: 0,
     ease: Expo.easeInOut
 })
 
 TweenMax.staggerFrom("#menu li a", 1, {
-    delay: 8.1,
+    delay: 3.1,
     opacity: 0,
     ease: Expo.easeInOut
 }, 0.1);
@@ -50,7 +50,7 @@ TweenMax.from("#sub-title", 2, {
 window.addEventListener('load', (event) => {
     setTimeout(() => {
         document.querySelector('#scroll-down').classList.remove('notVisible');
-    }, 9100);
+    }, 3100);
   });
 
 // initialize wow.js
