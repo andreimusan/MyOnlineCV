@@ -33,14 +33,14 @@ TweenMax.from("#menu li", 1, {
 })
 
 TweenMax.staggerFrom("#menu li a", 1, {
-    delay: 3.1,
+    delay: 1.1,
     opacity: 0,
     ease: Expo.easeInOut
 }, 0.1);
 
 // title text animation
 TweenMax.from("#sub-title", 2, {
-    delay: 6.1,
+    delay: 1.1,
     y: 10,
     opacity: 0,
     ease: Expo.easeInOut
@@ -50,6 +50,7 @@ TweenMax.from("#sub-title", 2, {
 window.addEventListener('load', (event) => {
     setTimeout(() => {
         document.querySelector('#scroll-down').classList.remove('notVisible');
+        document.querySelector('#find-more').classList.remove('notVisible');
     }, 3100);
   });
 
