@@ -248,9 +248,9 @@
     cursor: pointer;
 }
 
-.hero-content .skills p {
-    margin-top: -1rem;
+.hero-content .skills .details {
     margin-bottom: 1.5rem;
+    margin-left: 2rem;
 }
 
 .hero-content .skills .details span {
@@ -262,7 +262,6 @@
     content: "";
     display: block;
     position: relative;
-    /* bottom: -0.3rem; */
     left: 0.1rem;
     height: 1px;
     width: 130px;
@@ -276,4 +275,10 @@
 .hero-content .skills .details .details-text:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+@media(max-width: 560px) {
+    .hero-content .skills .details {
+        margin-top: 1rem;
+    }
 }

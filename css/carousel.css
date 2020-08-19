@@ -17,7 +17,7 @@
 }
 
 .change-height {
-    height: 500px;
+    height: 600px;
 }
 
 .carousel-photo,
@@ -106,4 +106,79 @@
 .carousel-button-next2::after {
     left: 47%;
     transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media(max-width: 1200px) {
+    .change-height {
+        height: 500px;
+    }
+}
+
+@media(max-width: 990px) {
+    .change-height {
+        height: 350px;
+    }
+}
+
+@media(max-width: 768px) {
+    .change-height {
+        height: 250px;
+    }
+}
+
+@media(max-width: 560px) {
+    .change-height {
+        height: 230px;
+    }
+
+    .carousel-button-prev,
+    .carousel-button-next,
+    .carousel-button-prev2,
+    .carousel-button-next2 {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .change-height {
+        height: 160px;
+    }
+
+    .carousel-button-prev,
+    .carousel-button-next,
+    .carousel-button-prev2,
+    .carousel-button-next2 {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .carousel-button-prev,
+    .carousel-button-prev2 {
+        left:0;
+    }
+
+    .carousel-button-next,
+    .carousel-button-next2 {
+        right:0;
+    }
+
+    .carousel-button-prev::after,
+    .carousel-button-next::after,
+    .carousel-button-prev2::after,
+    .carousel-button-next2::after {
+        width: 5px;
+        height: 5px;
+        top: 50%;
+        left: 54%;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    .carousel-button-next::after,
+    .carousel-button-next2::after {
+        left: 47%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
 }
