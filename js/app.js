@@ -164,7 +164,6 @@ let scroll = new SmoothScroll('a[href*="#"]');
 })();
 
 // show / hide carousel
-
 function showHideCarousel() {
     let btn = document.getElementById('view-projects');
     btn.addEventListener('click', function() {
@@ -392,7 +391,7 @@ carousel1();
 //                     oldNext = 1;
 //                 }
 
-//                 // Now we've worked out where we are and where we're going, by adding/removing classes we'll trigger the transitions. Reset old next/prev elements to default classes
+//                 // Now we've worked out where we are and where we're going, by adding/removing classes we'll     trigger the transitions. Reset old next/prev elements to default classes
 //                 items[oldPrevious].className = itemClassName;
 //                 items[oldNext].className = itemClassName;
 
