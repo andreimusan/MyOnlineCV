@@ -12,11 +12,19 @@
 .hero-content p span {
     text-transform: uppercase;
     font-weight: 100;
-    color: #fff;
 }
 
 .hero-content h6 {
     text-align: left;
+}
+
+.hero-content .professional-info {
+    text-align: left;
+    color: grey;
+}
+
+.hero-content .professional {
+    margin-bottom: 20px;
 }
 
 @media(max-width: 768px) {
@@ -36,8 +44,8 @@
     background: url(https://images.unsplash.com/photo-1540885762261-a2ca01f290f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80) no-repeat 50% 70%;
 }
 
-.skills p span {
-    font-weight: 300;
+.skills span {
+    font-weight: 100;
     color: grey;
 }
 
@@ -55,4 +63,216 @@
     position: relative;
     bottom: 0.3rem;
     color: grey;
+}
+
+.progress-text {
+    display: block;
+    width: 170px;
+    margin-right: 5%;
+}
+
+.progress {
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 4px;
+    display: flex;
+    height: 20px;
+    width: 500px;
+    margin-top: 4px;
+}
+
+.progress-fill {
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #f0f0f0;
+    height: 12px;
+    width: 0;
+    position: relative;
+}
+
+.progress .progress-value{
+    display: block;
+    font-size: 12px;
+    color: #0f0f0f;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+}
+
+.progress-container {
+    display: flex;
+    height: 48px;
+}
+
+.tech {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.progress-fill-1 {
+    animation: load1 5s normal forwards 1s;
+}
+
+.progress-fill-2 {
+    animation: load2 5s normal forwards 1s;
+}
+
+.progress-fill-3 {
+    animation: load3 5s normal forwards 1s;
+}
+
+.progress-fill-4 {
+    animation: load4 5s normal forwards 1s;
+}
+
+.progress-fill-5 {
+    animation: load5 5s normal forwards 1s;
+}
+
+@keyframes load1 {
+    0% { 
+        width: 0; 
+    }
+
+    100% { 
+        width: 90%; 
+    }
+}
+
+@keyframes load2 {
+    0% { 
+        width: 0; 
+    }
+
+    100% { 
+        width: 85%; 
+    }
+}
+
+@keyframes load3 {
+    0% { 
+        width: 0; 
+    }
+
+    100% { 
+        width: 55%; 
+    }
+}
+
+@keyframes load4 {
+    0% { 
+        width: 0; 
+    }
+
+    100% { 
+        width: 25%; 
+    }
+}
+
+@keyframes load5 {
+    0% { 
+        width: 0; 
+    }
+
+    100% { 
+        width: 75%; 
+    }
+}
+
+@media(max-width: 1000px) {
+    .progress {
+        width: 400px;
+    }
+
+    .progress-text {
+        width: 120px;
+    }
+}
+
+@media(max-width: 768px) {
+    .progress {
+        width: 350px;
+    }
+}
+
+@media(max-width: 560px) {
+    .progress-container {
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .progress {
+        margin-top: 8px;
+        height: 16px;
+        padding: 0 3px;
+    }
+
+    .progress-fill {
+        height: 10px;
+    }
+
+    .progress .progress-value{
+        font-size: 10px;
+        top: 5px;
+    }
+}
+
+@media(max-width: 400px) {
+    .progress {
+        width: 230px;
+    }
+}
+
+.is-hidden {
+    visibility: hidden;
+}
+
+.hero-content .skills .details a {
+    text-transform: lowercase;
+    text-decoration: none;
+    font-weight: 300;
+    color: grey;
+}
+
+.hero-content .skills .details .details-text {
+    text-transform: lowercase;
+    font-weight: 300;
+    color: grey;
+    cursor: pointer;
+}
+
+.hero-content .skills p {
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .skills .details span {
+    font-weight: 700;
+}
+
+.details a::after,
+.hero-content .skills .details .details-text::after {
+    content: "";
+    display: block;
+    position: relative;
+    /* bottom: -0.3rem; */
+    left: 0.1rem;
+    height: 1px;
+    width: 130px;
+    background: grey;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.details a:hover::after,
+.hero-content .skills .details .details-text:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
