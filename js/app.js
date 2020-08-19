@@ -168,7 +168,7 @@ let scroll = new SmoothScroll('a[href*="#"]');
 function showHideCarousel() {
     let btn = document.getElementById('view-projects');
     btn.addEventListener('click', function() {
-        document.getElementById('carousel').classList.toggle('notVisible');
+        document.getElementById('carousel').classList.toggle('change-height');
     });
 };
 showHideCarousel();
