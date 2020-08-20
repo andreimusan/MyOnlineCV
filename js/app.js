@@ -60,30 +60,6 @@ new WOW().init();
 // initialize smooth scroll
 let scroll = new SmoothScroll('a[href*="#"]');
 
-// // send form to email
-// const sendBtn = document.getElementById('contact-submit');
-// sendBtn.addEventListener('click', function(event) {
-//     event.preventDefault();
-//     const contactName = document.getElementById('contact-name').value;
-//     const contactEmail = document.getElementById('contact-email').value;
-//     const contactMessage = document.getElementById('contact-message').value;
-//     console.log(contactName, contactEmail, contactMessage);
-
-//     let templateParams = {
-//         contactName: contactName,
-//         contactEmail: contactEmail,
-//         contactMessage: contactMessage
-//     };
-    
-    
-//     emailjs.sendForm('gmail', 'template_oSN3FJxX', templateParams)
-//         .then(function(response) {
-//            console.log('SUCCESS!', response.status, response.text);
-//         }, function(error) {
-//            console.log('FAILED...', error);
-//         });
-// });
-
 // display skills percentage and progress bar after scroll down to their position
 (function() {
 
@@ -292,6 +268,31 @@ function carousel1(){
     initCarousel();
 };
 carousel1();
+
+// send form to email
+// const sendBtn = document.getElementById('contact-submit');
+// sendBtn.addEventListener('click', function(event) {
+//     event.preventDefault();
+    
+//     emailjs.sendForm('gmail', 'template_Andrei', '#contact-form', 'user_H7c01DIrLpTuRGbCwvkrq')
+//         .then(function(response) {
+//            console.log('SUCCESS!', response.status, response.text);
+//         }, function(error) {
+//            console.log('FAILED...', error);
+//         });
+        
+// });
+
+function submitForm() {
+    event.preventDefault();
+    
+    emailjs.sendForm('gmail', 'template_Andrei', '#contact-form', 'user_H7c01DIrLpTuRGbCwvkrq')
+        .then(function(response) {
+           console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+           console.log('FAILED...', error);
+        });
+}
 
 // // carousel 2
 // function carousel2(){
