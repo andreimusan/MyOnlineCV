@@ -7,6 +7,23 @@ nav {
     z-index: 1;
 }
 
+nav .brand {
+    float: right;
+    display: block;
+    margin-right: 82px;
+    line-height: 80px;
+    font-weight: 700;
+}
+
+nav .brand a {
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+nav .brand a:hover {
+    text-decoration: none;
+}
+
 .progress-bar {
     position: absolute;
     top: 80px;
@@ -186,7 +203,7 @@ nav #menu li a:hover::after {
         color: #fff;
     }
 
-    nav #brand {
+    nav .brand {
         margin-left: 24px;
     }
 

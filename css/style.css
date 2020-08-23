@@ -231,4 +231,9 @@ body {
     #media ul {
         padding-left: 30px;
     }
+
+    .find-more {
+        bottom: 15px;
+        font-size: 13px;
+    }
 }

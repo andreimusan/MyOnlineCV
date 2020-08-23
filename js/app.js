@@ -25,6 +25,19 @@ window.onscroll = function() {
 };
 
 // nav animation
+TweenMax.from("#brand", 1, {
+    delay: 3.1,
+    y: 10,
+    opacity: 0,
+    ease: Expo.easeInOut
+})
+
+TweenMax.staggerFrom("#brand", 1, {
+    delay: 1.1,
+    opacity: 0,
+    ease: Expo.easeInOut
+}, 0.1);
+
 TweenMax.from("#menu li", 1, {
     delay: 3.1,
     y: 10,
