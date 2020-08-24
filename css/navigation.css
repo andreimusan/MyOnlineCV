@@ -10,7 +10,7 @@ nav {
 nav .brand {
     float: right;
     display: block;
-    margin-right: 82px;
+    margin-right: 50px;
     line-height: 80px;
     font-weight: 700;
 }
@@ -204,7 +204,7 @@ nav #menu li a:hover::after {
     }
 
     nav .brand {
-        margin-left: 24px;
+        margin-right: 24px;
     }
 
     #menu a {
