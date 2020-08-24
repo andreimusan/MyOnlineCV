@@ -266,7 +266,7 @@
     content: "";
     display: block;
     position: relative;
-    left: -0.1rem;
+    left: 0rem;
     height: 1px;
     width: 135px;
     background: grey;

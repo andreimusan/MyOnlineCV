@@ -63,7 +63,7 @@ nav #menu li a::after {
     display: block;
     position: relative;
     bottom: 1.35rem;
-    left: -0.1rem;
+    left: 0rem;
     height: 1px;
     background: #fff;
     transform: scaleX(0);
